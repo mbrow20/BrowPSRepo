@@ -40,7 +40,7 @@ data2<<-data1 [dpart,]<br>
 <ol>
 <li><strong>Functions5SR.R</strong>--Performs matching on the data and is used with "ExampleCodeSim15Vars2LevNormWt.R".</li>
 <li><strong>Functions5SR_2020CEM.R</strong>--Performs Coarsened Exact Matching (CEM) with various estimators (e.g., random forest, etc.). Used in conjunction with data set <strong>CAN2015_15Vars2LevNormWtCEM.csv</strong> and covariance matrix <strong> CovMatrixWtCEM.csv</strong>.matching on the data and is used with "ExampleCodeSim15Vars2LevNormWt.R".</li>
-<li><strong>ExampleCodeSim15Vars2LevNormWtCEM.R</strong>--Estimates various Coarsened Exact Matching (CEM) models. Be sure to change the source to <strong>Functions5SR\_2020CEM.R</strong>, <strong>data1<-</strong> to <strong>CAN2015\_15Vars2LevWithNormWtCEM.csv</strong>, and the <strong>CovMatrix</strong> to <strong> CovMatrixWtCEM.csv</strong>.</li>
+<li><strong>ExampleCodeSim15Vars2LevNormWtCEM.R</strong>--Estimates various Coarsened Exact Matching (CEM) models. Be sure to change the source to <strong>Functions5SR_2020CEM.R</strong>, <strong>data1<-</strong> to <strong>CAN2015_15Vars2LevWithNormWtCEM.csv</strong>, and the <strong>CovMatrix</strong> to <strong> CovMatrixWtCEM.csv</strong>.</li>
 <li><strong>Functions6SR.R</strong>--Performs trimming on data based on algorithm by Imbens and Rubin (2015). Also used with  
    "ExampleCodeSim15Vars2LevNormWt.R".</li>
 <li><strong>Functions7SR.R</strong>--Performs joint modeling imputation based on van Buuren (2012). The lauching application for this function is "ExampleMARMissingJOMO.R".</li>
