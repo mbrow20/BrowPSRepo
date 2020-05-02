@@ -1,6 +1,6 @@
 # BrowPSRepo
 This is a repository for the propensity score analysis with 2015 Programme for International Student Assessment (PISA) data
-# Diss_Fall2019
+# Functions and Data Files for Simulation
 <p>These are the functions and the .csv data and datasets used for the simulation of the dissertation. <strong> Be sure to download all these files into a single directory (folder) on your computer.</strong> Below is a description of the different functions. Many of the functions are run through "ExampleCodeSim15Vars2LevNormWt.R". To utilize the various functions within this R script, specify using the source(), as in <strong>source("Functions13Sub.R")</strong>. In the last line of the 'ExampleCodeSim15Vars2Lev'-class of launch applications you can specify the number of iterations to run for the simulation. Here is an example,</p>
 <p> <strong>SimulationWithCovMat(CovMatrixWt,data1,10,mu_beta)</strong>,</p> 
 
@@ -39,6 +39,8 @@ data2<<-data1 [dpart,]<br>
 <p>Search the function themselves to find these lines. With some functions, e.g.,<strong><i> Functions13Sub.R</strong></i>, <strong><i>Functions18.R</strong></i>, and<strong><i> Functions5VAR500.R</strong></i>, it is <strong>not possible to use the partition option as these functions require the full number of observations</strong>. Here is a brief explanation of the functions. A full explanation can be found in the <i>Appendix</i> of the dissertation. Most functions estimate RMSE, provide a table of balance statistics, display the iteration count, and output a t-stat(<i>df</i>) for sensitivity analysis (null being no confounding due to unobserved covariates).</p>
 <ol>
 <li><strong>Functions5SR.R</strong>--Performs matching on the data and is used with "ExampleCodeSim15Vars2LevNormWt.R".</li>
+<li><strong>Functions5SR_2020CEM.R</strong>--Performs Coarsened Exact Matching (CEM) with various estimators (e.g., random forest, etc.). Used in conjunction with data set <strong>CAN2015_15Vars2LevNormWtCEM.csv</strong> and covariance matrix <strong> CovMatrixWtCEM.csv</strong>.matching on the data and is used with "ExampleCodeSim15Vars2LevNormWt.R".</li>
+<li><strong>ExampleCodeSim15Vars2LevNormWtCEM.R</strong>--Estimates various Coarsened Exact Matching (CEM) models. Be sure to change the source to <strong>Functions5SR\_2020CEM.R</strong>, <strong>data1<-</strong> to <strong>CAN2015\_15Vars2LevWithNormWtCEM.csv</strong>, and the <strong>CovMatrix</strong> to <strong> CovMatrixWtCEM.csv</strong>.</li>
 <li><strong>Functions6SR.R</strong>--Performs trimming on data based on algorithm by Imbens and Rubin (2015). Also used with  
    "ExampleCodeSim15Vars2LevNormWt.R".</li>
 <li><strong>Functions7SR.R</strong>--Performs joint modeling imputation based on van Buuren (2012). The lauching application for this function is "ExampleMARMissingJOMO.R".</li>
