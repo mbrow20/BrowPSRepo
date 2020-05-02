@@ -1,0 +1,16 @@
+##This code is used with Functions18.R which runs the bART code for the simulations
+##The added part of the code is the number of treated subjects
+rm(list=ls())
+gc()
+setwd("C:/Users/mbrow20/Desktop/BrowDiss_Fall2019")
+source("Functions18.R")
+library(MCMCpack)
+library(MatchIt)
+library(Zelig)
+library(caret)
+library(dplyr)
+library(plyr)
+CovMatrixWt<-read.csv("CovMat15Vars2LevZWt.csv",header=TRUE,sep=",")
+data1<-read.csv("CAN2015_15Vars2LevWithNormWt.csv",header=TRUE,sep=",")
+mu_beta<<-c(1.1,.02,-1,2,1.5,0.04,1.2,-1.3,0.8,-0.5,-1.4,0.3,-0.3,0.75,1.6,-0.98)#The 4th variable has a true beta coefficient of '2'###
+SimulationWithCovMat(CovMatrixWt,data1,10,mu_beta,1156)
