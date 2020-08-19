@@ -596,6 +596,7 @@ SimulationWithCovMat=function(CovMatrixWt,data1,Sims,mu_beta){
   data4<<-as.data.frame(data4)
   colnames(data4)[1]="treat"
   data4<<-as.data.frame(data4)
+  write.table(data4, file="data4.csv", col.names = T, row.names = F, sep = ",", append=FALSE)
   
   ########We use the PS.CovSelection.Function to choose covariates for the PS model###############
   PS.CovSelection.Function(data4)

@@ -16,4 +16,4 @@ library(MASS)
 CovMatrixWt<-read.csv("CovMat15Vars2LevZWt.csv",header=TRUE,sep=",")
 data1<-read.csv("CAN2015_15Vars2LevWithNormWt.csv",header=TRUE,sep=",")
 mu_beta<<-c(1.1,.02,-1,2,1.5,0.04,1.2,-1.3,0.8,-0.5,-1.4,0.3,-0.3,0.75,1.6,-0.98)#The 4th variable has a true beta coefficient of '2'###
-SimulationWithCovMat(CovMatrixWt,data1,500,mu_beta)#This uses the PS 
+SimulationWithCovMat(CovMatrixWt,data1,20,mu_beta)#This uses the PS 
